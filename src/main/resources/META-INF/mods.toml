@@ -1,0 +1,12 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+[[mods]]
+
+modId="rainbowshulkers"
+version="1.0"
+displayName="Rainbow Shulkers"
+credits="https://www.reddit.com/r/minecraftsuggestions/comments/hhutpk/shulkers_named_jeb_should_cycle_colors_as_sheep_do/"
+authors="TurtyWurty"
+description='''
+A mod that makes shulkers go rainbow if you name it '_jeb'.
+'''

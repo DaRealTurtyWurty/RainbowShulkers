@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"package": "com.turtywurty.rainbowshulkers.mixin",
+	"compatibilityLevel": "JAVA_8",
+	"refmap": "rainbowshulkers.refmap.json",
+	"mixins": [
+		
+	],
+	"client": [
+		"JebShulkerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"minVersion": "0.8"
+}
