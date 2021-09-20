@@ -28,6 +28,7 @@ public class JebShulkerMixin {
 	private void render(CallbackInfo ci, ResourceLocation resourcelocation, MatrixStack matrixStackIn,
 			IRenderTypeBuffer bufferIn, int packedLightIn, ShulkerEntity entitylivingbaseIn, float limbSwing,
 			float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
+		System.out.println(resourcelocation);
 		int ticks = entitylivingbaseIn.ticksExisted / 25 + entitylivingbaseIn.getEntityId();
 		int colorLength = DyeColor.values().length;
 		int colorIndex = ticks % colorLength;
@@ -42,6 +43,5 @@ public class JebShulkerMixin {
 				.getRgbDye(new float[] { red, green, blue }) != null
 						? RainbowShulkers.getRgbDye(new float[] { red, green, blue }).getId()
 						: 0];
-		System.out.println(resourcelocation);
 	}
 }

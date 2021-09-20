@@ -10,21 +10,23 @@ buildscript {
         classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
     }
 }
+
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
+apply plugin: 'org.spongepowered.mixin'
 
 version = '1.0'
 group = 'com.turtywurty.${modid}'
 archivesBaseName = '${modid}'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
-println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 
 minecraft {
     mappings channel: 'snapshot', version: '20210108-1.15.1'
     
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+    
     runs {
         client {
             workingDirectory project.file('run')
@@ -89,7 +91,6 @@ repositories{
 
     jcenter()
     mavenCentral()
-
 }
 
 jar {
@@ -121,8 +122,6 @@ publishing {
         }
     }
 }
-
-apply plugin: 'org.spongepowered.mixin'
 
 mixin {
     add sourceSets.main, "${modid}.refmap.json"
